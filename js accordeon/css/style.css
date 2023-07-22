@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.accordion {
+  width: 500px;
+  margin-bottom: 10px;
+}
+.accordion__control {
+  padding: 20px;
+  border: 1px solid #b8b8b8;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.accordion__control:focus {
+  border: 1px solid #000;
+}
+.accordion__name {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.accordion__title {
+  font-size: 24px;
+  margin: 0;
+}
+.accordion__icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border-radius: 100%;
+  background-color: #bfbfbf;
+  transition: transform 0.3s ease-in-out;
+}
+.accordion__icon::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 1px;
+  background-color: #000;
+}
+.accordion__icon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 50%;
+  background-color: #000;
+}
+.accordion__content {
+  padding: 0 20px;
+  border: 1px solid #b8b8b8;
+  border-top: none;
+  font-size: 18px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  box-sizing: content-box;
+  transition: all 0.3s ease-in-out;
+  will-change: max-height;
+}
+
+.open .accordion__icon {
+  transform: rotate(45deg);
+}
+
+.open .accordion__content {
+  opacity: 1;
+  padding: 20px;
+}

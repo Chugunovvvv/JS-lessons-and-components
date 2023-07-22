@@ -1,0 +1,90 @@
+@import 'nullstyle.scss';
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+  
+}
+
+.accordion {
+   width: 500px;
+   margin-bottom: 10px;
+   
+
+   &__control {
+      padding: 20px;
+      border: 1px solid #b8b8b8;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &:focus {
+         border: 1px solid #000;
+      }
+      
+   }
+   &__name {
+      font-size: 30px;
+      margin-bottom: 15px;
+   }
+   &__title {
+      font-size: 24px;
+      margin: 0;
+   }
+
+   &__icon {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      border-radius: 100%;
+      background-color: #bfbfbf;
+      transition: transform .3s ease-in-out;
+      &::before {
+         content: '';
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+         width: 50%;
+         height: 1px;
+         background-color: #000;
+      }
+      &::after {
+         content: '';
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+         width: 1px;
+         height: 50%;
+         background-color: #000;
+      }
+     
+   }
+
+   &__content {
+      padding: 0 20px;
+      border: 1px solid #b8b8b8;
+      border-top: none;
+      font-size: 18px;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      box-sizing: content-box; // чтобы считались падинги и расширяли блок
+      transition: all .3s ease-in-out;
+      will-change: max-height; // для оптимизации быстроты анимации
+   }
+}  
+
+.open .accordion__icon {
+   transform: rotate(45deg);
+}
+
+.open .accordion__content {
+   opacity: 1;
+   padding: 20px;
+ //  max-height: fit-content;  можно добавить это свойство, чтобы не считать высоту в js 
+}

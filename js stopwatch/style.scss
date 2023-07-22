@@ -1,0 +1,84 @@
+@import 'nullstyle.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body {
+   font-family: 'Roboto', sans-serif;
+}
+
+.container {
+   max-width: 1300px;
+   padding: 0 15px;
+   margin: auto;
+}
+
+
+.header {
+   background-color: blue;
+
+   &__container {
+   }
+
+   &__title {
+      padding: 100px 0;
+      font-size: 75px;
+      text-align: center;
+   }
+}
+
+.main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+
+   &__container {
+   }
+
+   &__counter {
+      margin-top: 50px;
+      margin-bottom: 70px;
+      border: 1px solid #000;
+      font-size: 60px;
+   }
+}
+.btn-start {
+   background-color: #000;
+   color: #fff;
+   border-radius: 5%;
+   padding: 23px 20px;
+   margin-right: 20px;
+   font-size: 40px;
+   transition: all  .3s;
+   &:hover {
+      background-color: #fff;
+      color: #000;
+      border: 1px solid #000;
+   }
+}
+.btn-pause {
+   background-color: #000;
+   color: #fff;
+   border-radius: 5%;
+   padding: 23px 20px;
+   margin-right: 20px;
+   font-size: 40px;
+   transition: all  .3s;
+   &:hover {
+      background-color: #fff;
+      color: #000;
+      border: 1px solid #000;
+   }
+}
+.btn-reset {
+   background-color: #000;
+   color: #fff;
+   border-radius: 5%;
+   font-size: 40px;
+   padding: 23px 20px;
+   transition: all  .3s;
+   &:hover {
+      background-color: #fff;
+      color: #000;
+      border: 1px solid #000;
+   }
+   
+}

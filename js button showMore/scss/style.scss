@@ -1,0 +1,55 @@
+@import 'nullstyle.scss';
+
+body {
+   background-color: azure;
+}
+
+.btn {
+text-align: center;
+padding: 15px 0;
+}
+.btn-center {
+   
+   background-color: #FFF;
+   color: #000;
+   border: 1px solid #000;
+   padding: 12px 25px;
+   
+
+ 
+   font-size: 24px;
+}
+.container {
+   max-width: 1230px;
+   padding: 0 15px;
+   margin: auto;
+}
+.cards {
+   max-width: 1000px;
+   margin: auto;
+   padding: 50px 0;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+   gap: 10px;
+}
+.card {
+   
+   min-height: 350px;
+   padding: 33px;
+   border-radius: 4px;
+   border: 1px solid #D9D9D9;
+   background: #FFF;
+   &:nth-child(n+7) {
+      display: none;
+   }
+   
+		&__title {
+		}
+
+		&__text {
+		}
+}
+
+.card.visible {
+   display: block;
+}
